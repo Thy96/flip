@@ -18,7 +18,7 @@ function App() {
         Flip.from(state, {
           duration: 1.5,
           // nested: true,
-          absolute: true,
+          absolute: false,
           ease: "power1.inOut",
           onComplete: () => {
             tabs.forEach(e => {
