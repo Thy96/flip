@@ -12,20 +12,21 @@ function App() {
     tabs.forEach((el, i) => {
       el.addEventListener('click', function () {
         const state = Flip.getState(".tabs_tab, .tabs_heading, .tabs_num, .tabs_right", {
-          props: "fontSize,padding"
+          props: "fontSize,padding",
+          simple: true,
         });
 
         Flip.from(state, {
           duration: 1.5,
-          // nested: true,
-          absolute: false,
+          nested: true,
+          absolute: true,
           ease: "power1.inOut",
           onComplete: () => {
             tabs.forEach(e => {
               e.classList.add('closed')
             })
             el.classList.remove('closed')
-            console.log(el);
+            console.log('ok');
           }
         })
 
