@@ -13,7 +13,7 @@ function App() {
     tabs.forEach((el, i) => {
       el.addEventListener('click', function () {
         const state = Flip.getState(".tabs_tab, .tabs_heading, .tabs_num, .tabs_right", {
-          props: "fontSize",
+          props: "fontSize,padding",
           simple: true,
         });
 
