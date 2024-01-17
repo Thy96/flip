@@ -1,0 +1,52 @@
+:root {
+  --red: #D74C42;
+  --tan: #F9F6EE;
+  --purple: #E7E5FF;
+}
+
+/* Red Tab */
+[data-color="red"] {
+  background-color: var(--red);
+  color: var(--tan);
+}
+
+/* Purple Tab */
+[data-color="purple"] {
+  background-color: var(--purple);
+  color: var(--red);
+}
+
+/* Close State */
+.tabs_tab.closed {
+  width: 10em;
+  text-align: center;
+}
+
+.tabs_tab.closed :is(.tabs_heading, .tabs_num) {
+  font-size: 2em;
+}
+
+.tabs_tab.closed .tabs_right {
+  position: absolute;
+  padding: 6em 4.8em;
+}
+
+ /* Global Styles */
+ img::selection,
+ svg::selection {
+     background: transparent;
+ }
+
+ /* Link color inherits from parent font color  */
+ a {
+     color: inherit;
+ }
+
+ /* Disable / enable clicking on an element and its children  */
+ .no-click {
+     pointer-events: none;
+ }
+
+ .can-click {
+     pointer-events: auto;
+ }
