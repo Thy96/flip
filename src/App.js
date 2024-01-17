@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import './App.css';
 
 import gsap from "gsap";
@@ -8,11 +8,10 @@ import { Flip } from "gsap/Flip";
 gsap.registerPlugin(Flip);
 
 function App() {
-  const comp = useRef()
 
-  useGSAP(() => {
+
+  useEffect(() => {
     const tabs = gsap.utils.toArray('.tabs_tab')
-
     tabs.forEach((el, i) => {
       el.addEventListener('click', function () {
         const state = Flip.getState(".tabs_tab, .tabs_heading, .tabs_num, .tabs_right", {
@@ -34,13 +33,13 @@ function App() {
 
       })
     })
+  }, [])
 
-  }, { scope: comp })
   return (
     <>
       <div className="page-wrapper">
         <main className="main-wrapper">
-          <div className="tabs" ref={comp}>
+          <div className="tabs">
             <div className="tabs_tab">
               <div className="tabs_top">
                 <div className="tabs_left">
