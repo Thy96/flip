@@ -1,15 +1,12 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import { Flip } from "gsap/Flip";
 
 gsap.registerPlugin(Flip);
 
 function App() {
-
-
   useEffect(() => {
     const tabs = gsap.utils.toArray('.tabs_tab')
     tabs.forEach((el, i) => {
@@ -28,6 +25,7 @@ function App() {
               e.classList.add('closed')
             })
             el.classList.remove('closed')
+            console.log(el);
           }
         })
 
