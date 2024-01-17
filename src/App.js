@@ -7,7 +7,6 @@ import { Flip } from "gsap/Flip";
 gsap.registerPlugin(Flip);
 
 function App() {
-
   useEffect(() => {
     let tabs = gsap.utils.toArray('.tabs_tab')
     tabs.forEach((el, i) => {
@@ -31,7 +30,6 @@ function App() {
         })
       })
     })
-
   }, [])
 
   return (

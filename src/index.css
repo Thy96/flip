@@ -264,6 +264,7 @@
      -ms-flex-align: stretch;
      align-items: stretch;
      transition: all 1.5s;
+     pointer-events: none;
    }
    
    .tabs_tab.closed {
@@ -272,6 +273,12 @@
      -ms-flex: 0 0 auto;
      flex: 0 0 auto;
      transition: all 1s;
+     pointer-events: all;
+     cursor: pointer;
+   }
+
+   .tabs_tab.closed:hover{
+    opacity: 0.6;
    }
    
    .tabs_num {
