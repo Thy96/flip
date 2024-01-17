@@ -263,6 +263,7 @@
      -webkit-align-items: stretch;
      -ms-flex-align: stretch;
      align-items: stretch;
+     transition: all 1.5s;
    }
    
    .tabs_tab.closed {
@@ -270,6 +271,7 @@
      -webkit-flex: 0 0 auto;
      -ms-flex: 0 0 auto;
      flex: 0 0 auto;
+     transition: all 1s;
    }
    
    .tabs_num {
@@ -279,6 +281,7 @@
      font-weight: 600;
      letter-spacing: 0.03em;
      text-transform: uppercase;
+     transition: all 1.5s;
    }
    
    .tabs_heading {
@@ -291,6 +294,7 @@
      font-weight: 600;
      letter-spacing: -0.02em;
      text-transform: uppercase;
+     transition: 1.5s;
    }
    
    .tabs_heading.is-2 {

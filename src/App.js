@@ -18,7 +18,7 @@ function App() {
         });
 
         Flip.from(state, {
-          duration: 1.5,
+          duration: 0,
           nested: true,
           absolute: true,
           ease: "power1.inOut",
