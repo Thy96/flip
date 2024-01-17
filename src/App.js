@@ -7,8 +7,9 @@ import { Flip } from "gsap/Flip";
 gsap.registerPlugin(Flip);
 
 function App() {
+
   useEffect(() => {
-    const tabs = gsap.utils.toArray('.tabs_tab')
+    let tabs = gsap.utils.toArray('.tabs_tab')
     tabs.forEach((el, i) => {
       el.addEventListener('click', function () {
         const state = Flip.getState(".tabs_tab, .tabs_heading, .tabs_num, .tabs_right", {
@@ -22,16 +23,15 @@ function App() {
           absolute: true,
           ease: "power1.inOut",
           onComplete: () => {
-            tabs.forEach(e => {
+            tabs.forEach((e, i) => {
               e.classList.add('closed')
             })
             el.classList.remove('closed')
-            console.log('ok');
           }
         })
-
       })
     })
+
   }, [])
 
   return (
